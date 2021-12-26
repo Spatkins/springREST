@@ -2,7 +2,6 @@ package com.springrest.entities;
 
 import org.springframework.lang.NonNull;
 import org.springframework.security.core.GrantedAuthority;
-
 import javax.persistence.*;
 
 @Entity

@@ -13,7 +13,6 @@ import java.util.Optional;
 @Service
 public class UserService implements UserDetailsService {
     
-    
     private final UserRepository userRepository;
 
     public UserService(UserRepository userRepository) {
@@ -22,9 +21,9 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findUserByEmail(username);
+        User user = userRepository.findUserByEmail(username);
+        return user;
     }
-
 
     public List<User> getList() {
         return userRepository.findAll();
