@@ -29,4 +29,9 @@ public class ViewController {
         model.addAttribute("user", user);
         return "rest/user/userTemplate";
     }
+
+    @GetMapping(value = "/denied")
+    public String dangerUser() {
+        return "/rest/user/denied";
+    }
 }
