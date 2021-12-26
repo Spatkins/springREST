@@ -1,23 +1,19 @@
 package com.springrest.controllers;
 
-import com.springrest.entities.Role;
 import com.springrest.entities.User;
 import com.springrest.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/rest/admin")
 public class AdminController {
 
     private final UserService userService;
-
 
     public AdminController(UserService userService) {
         this.userService = userService;
